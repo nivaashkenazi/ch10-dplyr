@@ -31,8 +31,8 @@ worst.highway.milage <- filter(two.wheel.drives, hwy == min(hwy))$id
 
 # Write a function that takes a `year` and a `make` as parameters, and returns 
 # The vehicle that gets the most hwy miles/gallon of vehicles of that make in that year
-BestChoice <- function(year, make) {
-  new.frame <- filter(vehicles, year == year, make == make)
+BestChoice <- function(in.year, in.make) {
+  new.frame <- filter(vehicles, year == in.year, in.make == make)
   return(filter(new.frame, hwy == max(hwy)))
 }
 
